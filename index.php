@@ -13,6 +13,7 @@ and open the template in the editor.
         <?php
         echo "please work better this time";
 <<<<<<< HEAD
+<<<<<<< HEAD
         echo "hey it's aimi here!";
         echo "hey it's aimi here!";
         echo "hope this works....";
@@ -20,6 +21,10 @@ and open the template in the editor.
         echo "Jenny"
 =======
         echo "Boo!";
+=======
+        echo "Boo!";
+        
+>>>>>>> master
         
         
 >>>>>>> master
