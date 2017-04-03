@@ -14,6 +14,7 @@ and open the template in the editor.
         echo "please work better this time";
         echo "hey it's aimi here!";
         echo "hey it's aimi here!";
+        echo "hope this works....";
         
       ?>
     </body>
