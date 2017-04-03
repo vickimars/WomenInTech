@@ -16,7 +16,7 @@ and open the template in the editor.
         echo "hey it's aimi here!";
         echo "hope this works....";
         echo "I'm here!";
-        
+        echo "Jenny"
       ?>
     </body>
 </html>
