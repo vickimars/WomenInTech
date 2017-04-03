@@ -12,11 +12,17 @@ and open the template in the editor.
     <body>
         <?php
         echo "please work better this time";
+<<<<<<< HEAD
         echo "hey it's aimi here!";
         echo "hey it's aimi here!";
         echo "hope this works....";
         echo "I'm here!";
         echo "Jenny"
+=======
+        echo "Boo!";
+        
+        
+>>>>>>> master
       ?>
     </body>
 </html>
