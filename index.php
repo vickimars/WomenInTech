@@ -12,9 +12,8 @@ and open the template in the editor.
     <body>
         <?php
         echo "please work better this time";
-        echo "hey it's aimi here!";
-        echo "hey it's aimi here!";
-        echo "hope this works....";
+        echo "Boo!";
+        
         
       ?>
     </body>
