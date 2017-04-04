@@ -13,8 +13,8 @@ and open the template in the editor.
         <?php
         echo "please work better this time";
         echo "Boo!";
-        
-        
+       
+
       ?>
     </body>
 </html>
