@@ -1,5 +1,4 @@
-</body>
-</html>
+
 <!DOCTYPE HTML>  
 <html>
 <head>
