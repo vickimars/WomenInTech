@@ -4,7 +4,7 @@
         $password = null;
         $options = null;
 try {
-      $pdo = new PDO($dsn, $user_name, $user_pass);
+      $pdo = new PDO($dsn, $username, $pword);
 } catch (PDOException $e) {
 	die($e->getMessage());  //die() for illustration
 					//always handle errors 
@@ -13,7 +13,7 @@ try {
         
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
    
- $pdo = new PDO ($_POST['user_name'], $_POST['user_pass']);
+ $pdo = new PDO ($_POST['username'], $_POST['pword']);
 }
  //user_id, user_name, user_pass,
 ?>
