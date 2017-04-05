@@ -1,7 +1,9 @@
-//navigation, title, etc
+
+<html>
 namespace View;
-</html>
-</body> 
+//navigation, title, etc 
 <div class="w3-teal">
   <h1>Header</h1>
 </div>
+</html>
+
