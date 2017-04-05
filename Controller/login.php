@@ -1,12 +1,23 @@
 <?php
-
-
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-	\Cart\Auth\login($pdo, $_POST['username'], $_POST['password']);
+        $dsn = "mysql:host=localhost;dbname=users"  ;
+        $user = "root";
+        $password = null;
+        $options = null;
+try {
+      $pdo = new PDO($dsn, $user_name, $user_pass);
+} catch (PDOException $e) {
+	die($e->getMessage());  //die() for illustration
+					//always handle errors 
+					//better than die!
 }
+        
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+   
+ $pdo = new PDO ($_POST['user_name'], $_POST['user_pass']);
+}
+ //user_id, user_name, user_pass,
 ?>
- 
-<!doctype html>
+
 <html>
 <head><title>Blog Post</title></head>
 <body>
@@ -14,6 +25,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 <h1>Login Page</h1>
 
 <?php echo 'login form'; ?>
-
 </body>
 </html>
