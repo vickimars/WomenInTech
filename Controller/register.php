@@ -8,7 +8,7 @@ foreach($_POST as $key=>$value) {
 	}
 }
 /* Password Matching Validation */
-if($_POST['pword'] != $_POST['confirm_password']){ 
+if($_POST['pword'] != $_POST['confirm_pword']){ 
 $error_message = 'Passwords should match<br>'; 
 }
 
