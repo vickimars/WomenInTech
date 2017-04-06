@@ -1,29 +1,21 @@
-<?php
-// This is the home page of our application
-?>
-
-
-<!doctype html>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-<head><title>Women in Tech Blog</title></head>
-
-<body>
-
-<h1>Women in Tech Blog</h1>
-
-<?= display('user', ['heading' => 'User', 'users' => $users, 'blog' => $blog]); ?>
-<?= display('items', ['heading' => 'Blog', 'blog' => $blog]); ?>
-<?= display('users', ['heading' => 'All Users', 'users' => $users]); ?>
-
-<?php if($_SERVER['REQUEST_METHOD'] == 'GET'): ?>
-	<?= display('newitem');?>
-<?php else: ?>
-
-<?php echo display('item', \Blog\App\add_item($blog, $_POST) + ['heading' => 'New Item']); ?>
-
-<?php endif; ?>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        echo "please work better this time";
+        echo "hey it's aimi here!";
+        echo "hey it's aimi here!";
+        echo "hope this works....";
+        
+      ?>
+    </body>
 </html>
-
-
