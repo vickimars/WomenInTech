@@ -1,10 +1,5 @@
 <?php
 // This is the home page of our application
-include 'common.php';
-include 'lib/Blog/App/blog_app.php';
-include 'lib/Blog/View/blog_view.php';
-
-use function Blog\View\display;
 ?>
 
 

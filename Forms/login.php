@@ -1,15 +1,16 @@
 <?php
 // It contains the login form
 
-include 'lib/Blog/Db/blog_db.php';
-include 'lib/Blog/Auth/blog_auth.php';
-include 'lib/Blog/View/blog_view.php';
+include 'controller/controller.php';
+include 'controller/login.php';
+include 'controller/register.php';
+include 'controller/upload.php';
 
 ?>
 
 <?php 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-	Blog\Auth\login($users, $_POST['username'], $_POST['password']);
+	login($users, $_POST['username'], $_POST['pword']);
 }
 ?>
  
@@ -20,5 +21,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <h1>Women in Tech Blog</h1>
 
-<?php echo Blog\View\display('loginform'); ?>
+<?php echo Forms\login\display('login'); ?>
 
