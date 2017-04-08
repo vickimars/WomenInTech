@@ -1,4 +1,5 @@
 <?php
+//include 'functions.php';
 
 /* Form Required Field Validation */
 foreach($_POST as $key=>$value) {
@@ -7,12 +8,7 @@ foreach($_POST as $key=>$value) {
 	break;
 	}
 }
-/* Password Matching Validation */
-if($_POST['pword'] != $_POST['confirm_pword']){ 
-$error_message = 'Passwords should match<br>'; 
-}
 
-$email = "john.doe@example.com";
 
 // Remove all illegal characters from email
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);

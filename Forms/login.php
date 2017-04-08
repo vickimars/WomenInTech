@@ -10,7 +10,7 @@ include 'controller/upload.php';
 
 <?php 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-	login($users, $_POST['username'], $_POST['pword']);
+	login($users, $_POST['username'], $_POST['password']);
 }
 ?>
  
