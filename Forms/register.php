@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> refs/remotes/origin/master
 <!--<<<<<<< HEAD
 
 =======
 >>>>>>> refs/remotes/origin/master -->
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/master
+=======
 >>>>>>> refs/remotes/origin/master
 <!DOCTYPE HTML>  
 <html>
