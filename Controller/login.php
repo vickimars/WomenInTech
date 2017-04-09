@@ -50,7 +50,7 @@
    $count = mysql_num_rows($result);
    if($count!=0){
     $error = true;
-    $emailError = "Provided Email is already in use.";
+    $emailError = "The e-mail you ave provided  is already in use.";
    }
   }
   // password validation
@@ -59,7 +59,7 @@
    $passError = "Please enter password.";
   } else if(strlen($pass) < 6) {
    $error = true;
-   $passError = "Password must have atleast 6 characters.";
+   $passError = "your password must have atleast 6 characters.";
   }
   
   // password encrypt using SHA256();

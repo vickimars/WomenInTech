@@ -1,5 +1,6 @@
  <?php
- include 'uploadpost.php';
+ include 'forms/uploadpost.php';
+ 
 if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
 
 	// Do some minor form validation to make sure there is content
@@ -27,7 +28,6 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
 	
 } // end IF
 
-// Do the wp_insert_post action to insert it
-do_action('wp_insert_post', 'wp_insert_post'); 
+; 
 
 ?>

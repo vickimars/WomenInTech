@@ -6,7 +6,7 @@
   header("Location: .php");
  }
  include_once 'connection.php';
- //include ;forms/register.php
+ //include forms/register.php
 
  $error = false;
 
