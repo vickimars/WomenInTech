@@ -1,36 +1,33 @@
  <?php
+ include 'uploadpost.php';
+if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] )) {
 
-namespace Controller;
-
-const AllowedTypes = ['image/jpeg', 'image/jpg'];
-const InputKey = 'myfile';
-
-function upload_file() {
-	if (empty($_FILES[InputKey])) {	//if no file uploaded
-		die("You have not uploaded a file");
+	// Do some minor form validation to make sure there is content
+	if (isset ($_POST['title'])) {
+		$title =  $_POST['title'];
+	} else {
+		echo 'Please enter a title';
 	}
-
-	if ($_FILES[InputKey]['error'] > 0) { 
-		die("value greater than zero" .[InputKey]['error']);//value of 0 would be a success
+	if (isset ($_POST['description'])) {
+		$description = $_POST['description'];
+	} else {
+		echo 'Please enter the content';
 	}
+	$tags = $_POST['post_tags'];
 
+	// Add the content of the form to $post as an array
+	$post = array(
+		'post_title'	=> $title,
+		'post_content'	=> $description,
+		'post_category'	=> $_POST['cat'],  // Usable for custom taxonomies too
+		'tags_input'	=> $tags,
+		'post_status'	=> 'publish',			// Choose: publish, preview, future, etc.
+		'post_type'	=> $_POST['post_type']  // Use a custom post type if you want to
+	);
+	
+} // end IF
 
-	if (!in_array($_FILES[InputKey]['type'], AllowedTypes)) {
-		die(": " . $_FILES[InputKey]['You have uploaded an incorrect file type']);//not a jpeg//
-	}
+// Do the wp_insert_post action to insert it
+do_action('wp_insert_post', 'wp_insert_post'); 
 
-
-	$tmpFile = $_FILES[InputKey]['tmp_name'];//file moved to temporary location
-
-	//DOMAIN SPECIFIC: ., move the file from a temporary location
-	$dstFile = 'uploads/' . $_FILES[InputKey]['name'];
-
-	if (!move_uploaded_file($tmpFile, $dstFile)) {//checks that the right file has been moved
-		die("Handle Error");// ask why ! move uploaded file?
-	}
-		
-	//Clean up the temp file
-	if (file_exists($tmpFile)) {
-		unlink($tmp); 
-	}
-}
+?>

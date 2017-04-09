@@ -7,7 +7,7 @@ include 'controller/login.php';
 //function login($user, $username, $pword) {//
 	//$user = \Cart\Db\read_user($user, $username, $pword);//
 
-	if($users && password_verify($pword, $users['user_password'])) {
+	if($username && password_verify($password, $username['user_password'])) {
 		$_SESSION['user_name'] = $username;
 		header('Location: product.php');
 	} else {
