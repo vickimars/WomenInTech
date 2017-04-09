@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-
-=======
+<<<<<<< HEAD =======
 >>>>>>> refs/remotes/origin/master
 <!DOCTYPE HTML>  
 <html>
