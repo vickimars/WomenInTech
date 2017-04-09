@@ -1,23 +1,20 @@
 <?php
-        $dsn = "mysql:host=localhost;dbname=users"  ;
-        $user = "root";
-        $password = null;
-        $options = null;
-try {
-      $pdo = new PDO($dsn, $username, $pword);
-} catch (PDOException $e) {
-	die($e->getMessage());  //die() for illustration
-					//always handle errors 
-					//better than die!
-}
-        
+
+include functions.php;
+      
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
    
- $pdo = new PDO ($_POST['username'], $_POST['pword']);
+ $pdo = new PDO ($_POST['username'], $_POST['password']);
 }
  //user_id, user_name, user_pass,
-?>
 
+/* Password Matching Validation */
+if($_POST['password'] != $_POST['confirm_pword']){ 
+$error_message = 'Passwords should match<br>'; 
+}
+
+$email = "john.doe@example.com";
+?>
 <html>
 <head><title>Blog Post</title></head>
 <body>

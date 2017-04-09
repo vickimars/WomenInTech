@@ -24,18 +24,18 @@ function get_user_list() {
     }
 }
 
-function add_post($title, $post, $author, $username, $date){
+function add_post($pdo,$post){
     //include 'connection.php';
     
     $sql = 'INSERT INTO posts(title, post, author, username, date) VALUES(?, ?, ?, ?, ?)';
     
     try {
-        $results = $db->prepare($sql);
-        $results->bindValue(1, $title, PDO::PARAM_STR);
-        $results->bindValue(2, $post, PDO::PARAM_STR);
-		$results->bindValue(3, $author, PDO::PARAM_STR);
-		$results->bindValue(4, $username, PDO::PARAM_STR);
-		$results->bindValue(5, $date, PDO::PARAM_STR);
+        $results = $pdo->prepare($sql);
+        $results->bindValue(1, $post['title'], PDO::PARAM_STR);
+        $results->bindValue(2, $post['post'], PDO::PARAM_STR);
+		$results->bindValue(3, $post['author'], PDO::PARAM_STR);
+		$results->bindValue(4, $post['username'], PDO::PARAM_STR);
+		$results->bindValue(5, $post['date'], PDO::PARAM_STR);
         $results->execute();
     } catch (Exception $e) {
         echo "Error!: " . $e->getMessage() . "<br />";
@@ -44,18 +44,19 @@ function add_post($title, $post, $author, $username, $date){
     return true;
 }
 
-function add_user($username, $pword, $email, $user_date, $user_level){
+
+//This function has been tested and works!
+function add_user($pdo, $user){
     //include 'connection.php';
  //userdate to include in db?   
-    $sql = 'INSERT INTO users(username, $pword, $email, $user_date, $user_level) VALUES(?, ?, ?, ?, ?)';
+    $sql = 'INSERT INTO users(username, password, email, about_me) VALUES(?, ?, ?, ?)';
     
     try {
-        $results = $db->prepare($sql);
-        $results->bindValue(1, $username, PDO::PARAM_STR);
-		$results->bindValue(2, $pword, PDO::PARAM_STR);
-		$results->bindValue(3, $email, PDO::PARAM_STR);
-		//$results->bindValue(4, $user_date, PDO::PARAM_STR);
-		$results->bindValue(5, $user_level, PDO::PARAM_STR);
+        $results = $pdo->prepare($sql);
+        $results->bindValue(1, $user['username'], PDO::PARAM_STR);
+		$results->bindValue(2, $user['password'], PDO::PARAM_STR);
+		$results->bindValue(3, $user['email'], PDO::PARAM_STR);
+		$results->bindValue(4, $user['bio'], PDO::PARAM_STR);
         $results->execute();
     } catch (Exception $e) {
         echo "Error!: " . $e->getMessage() . "<br />";
