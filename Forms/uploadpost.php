@@ -28,6 +28,21 @@
 
 <input type="hidden" name="action" value="post" />
 
+<button onclick="myFunction()">upload</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x;
+    if (confirm("Are you sure you want to upload this form!") == true) {
+        x = "Yes";
+    } else {
+        x = "Cancel";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
 
 </form>
 
