@@ -51,7 +51,11 @@
 <?php endif; ?>
 
 </body>
+<<<<<<< HEAD
 >>>>>>> master
+=======
+
+>>>>>>> origin/Jen
 </html>
 
 

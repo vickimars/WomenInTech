@@ -1,5 +1,4 @@
 <!--<<<<<<< HEAD
-
 =======
 >>>>>>> refs/remotes/origin/master -->
 <!DOCTYPE HTML>  
@@ -14,11 +13,9 @@
 <?php
 include 'connection.php';
 include 'functions.php';
-
 // define variables and set to empty values
 $usernameErr = $emailErr = $passwordErr = "";
 $username = $email = $password = $bio = "";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["username"])) {
     $usernameErr = "Username is required";
@@ -37,14 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $password = test_input($_POST["password"]);
   }
-
   if (empty($_POST["bio"])) {
     $bio = "";
   } else {
     $bio = test_input($_POST["bio"]);
   }
 }
-
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -80,7 +75,6 @@ echo "<br>";
 echo $password;
 echo "<br>";
 echo $bio;
-
 add_user($pdo,$_POST);
 ?>
 

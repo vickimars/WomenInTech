@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD:Controller/login.php
  ob_start();
  session_start();
  if( isset($_SESSION['username'])!="" ){
@@ -9,6 +10,15 @@
  
  //include 'forms/login.php';
  
+=======
+include 'functions.php';
+      
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+   
+ $pdo = new PDO ($_POST['username'], $_POST['password']);
+}
+ //user_id, user_name, user_pass,
+>>>>>>> origin/Jen:Controller/loginval.php
 
  $error = false;
 
