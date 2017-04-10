@@ -3,6 +3,7 @@
 =======
 >>>>>>> refs/remotes/origin/master -->
 <!DOCTYPE HTML>  
+
 <html>
 <head>
 <style>
@@ -10,16 +11,11 @@
 </style>
 </head>
 <body>  
-
 <?php
-include 'connection.php';
+  include 'connection.php';
 include 'functions.php';
 
-// define variables and set to empty values
-$usernameErr = $emailErr = $passwordErr = "";
-$username = $email = $password = $bio = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["username"])) {
     $usernameErr = "Username is required";
   } else {
@@ -51,10 +47,17 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-?>
 
-    <h2>Women in Tech Blog <br>
-    Registration</h2>
+
+   
+// define variables and set to empty values
+
+$usernameErr = $emailErr = $passwordErr = "";
+$username = $email = $password = $bio = "";
+?>
+i
+   <h2>Women in Tech Blog <br>   
+Registration</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Username: <input type="text" name="username">
