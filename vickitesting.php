@@ -7,3 +7,4 @@
  */
 
 include 'controller/login.php';
+?>
