@@ -1,25 +1,39 @@
 <?php
 // It contains the login form
 
-include 'controller/controller.php';
+
 include 'controller/login.php';
-include 'controller/register.php';
-include 'controller/upload.php';
+
 
 ?>
 
 <?php 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-	login($users, $_POST['username'], $_POST['password']);
+	login($_POST['username'], $_POST['password']);
 }
 ?>
  
 <!doctype html>
 <html>
-<head><title>Welcome to our Blog</title></head>
+<head><title>User Log In</title></head>
 <body>
 
-<h1>Women in Tech Blog</h1>
+    <h1><br>
+        Log in:<br>
+</h1>
 
-<?php echo Forms\login\display('login'); ?>
+<!-- Using JL's login form
+-->
+<form action="index.php" method="post">
+<div>
+<label for="username">Username: </label>
+<input name="username" type="text"/>
+</div>
 
+<div>
+<label for="password">Password: </label>
+<input name="password" type="password"/>
+</div>
+
+<button type="submit">Login</button>
+</form>
