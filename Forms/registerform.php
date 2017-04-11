@@ -1,7 +1,11 @@
+<<<<<<< HEAD:Forms/registerform.php
 <!--<<<<<<< HEAD
 =======
 >>>>>>> refs/remotes/origin/master -->
 <!DOCTYPE HTML>  
+=======
+
+>>>>>>> refs/remotes/origin/master:Forms/register.php
 <html>
 <head>
 <style>
@@ -9,13 +13,19 @@
 </style>
 </head>
 <body>  
-
 <?php
+<<<<<<< HEAD:Forms/registerform.php
 include 'connection.php';
 include 'functions.php';
+=======
+
+   
+>>>>>>> refs/remotes/origin/master:Forms/register.php
 // define variables and set to empty values
+
 $usernameErr = $emailErr = $passwordErr = "";
 $username = $email = $password = $bio = "";
+<<<<<<< HEAD:Forms/registerform.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["username"])) {
     $usernameErr = "Username is required";
@@ -46,10 +56,11 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+=======
+>>>>>>> refs/remotes/origin/master:Forms/register.php
 ?>
+    <h2>Registration</h2>
 
-    <h2>Women in Tech Blog <br>
-    Registration</h2>
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Username: <input type="text" name="username">
@@ -61,7 +72,7 @@ function test_input($data) {
   Password: <input type="text" name="password">
   <span class="error"><?php echo $passwordErr;?></span>
   <br><br>
-  Bio: <textarea name="bio" rows="5" cols="40"></textarea>
+  About me: <textarea name="bio" rows="5" cols="40"></textarea>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
