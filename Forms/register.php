@@ -42,7 +42,9 @@ echo $password;
 echo "<br>";
 echo $bio;
 
-add_user($pdo,$_POST);
+if(isset($_POST["submit"])){
+add_user($pdo,$_POST);}
+
 ?>
 
 </body>
