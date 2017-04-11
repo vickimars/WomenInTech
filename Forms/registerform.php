@@ -86,6 +86,7 @@ echo "<br>";
 echo $password;
 echo "<br>";
 echo $bio;
+<<<<<<< HEAD
 <<<<<<< HEAD:Forms/registerform.php
 add_user($pdo,$_POST);
 =======
@@ -94,6 +95,9 @@ if(isset($_POST["submit"])){
 add_user($pdo,$_POST);}
 
 >>>>>>> refs/remotes/origin/master:Forms/register.php
+=======
+add_user($pdo,$_POST);
+>>>>>>> origin/Jen
 ?>
 
 </body>
