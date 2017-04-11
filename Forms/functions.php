@@ -66,18 +66,20 @@ include 'Forms/connection.php';
 
 function add_post($pdo,$post){
 include 'Forms/connection.php';
-    if ($id) {
+    /*if ($id) {
         $sql = 'UPDATE posts SET title = ?, post = ?, author = ?, username = ?, date = ? WHERE id = ?';
     } else {
     $sql = 'INSERT INTO posts(title, post, author, username, date) VALUES(?, ?, ?, ?, ?)';
-    }
+    }*/
+
+$sql = 'INSERT INTO BlogPosts(Title, Post, Author, username) VALUES(?, ?, ?, ?)';
     try {
         $results = $pdo->prepare($sql);
-        $results->bindValue(1, $post['title'], PDO::PARAM_STR);
-        $results->bindValue(2, $post['post'], PDO::PARAM_STR);
-		$results->bindValue(3, $post['author'], PDO::PARAM_STR);
-		$results->bindValue(4, $post['username'], PDO::PARAM_STR);
-		$results->bindValue(5, $post['date'], PDO::PARAM_STR);
+        $results->bindValue(1, $post['Title'], PDO::PARAM_STR);
+        $results->bindValue(2, $post['Post'], PDO::PARAM_STR);
+		$results->bindValue(3, $post['Author'], PDO::PARAM_STR);
+		$results->bindValue(4, $post['Username'], PDO::PARAM_STR);
+
         $results->execute();
     } catch (Exception $e) {
         echo "Error!: " . $e->getMessage() . "<br />";
