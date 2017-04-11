@@ -1,75 +1,14 @@
 <?php
-/*
- * Login Functions 
- * 
- */
 
-<<<<<<< HEAD:Controller/loginval.php
-<<<<<<< HEAD:Controller/login.php
-=======
-
-
-require_once 'Forms/functions.php';
-
-session_start();
-
-function login($username, $password) {
-	$user = get_user($username);
-
-	if(password_verify($password, $user['password'])) {
-            $_SESSION['username'] = $username; 
-            header('Location: success.php');
-        } else {
-            die("Please log in");
-	}
-}
-
-function logout() {
-    session_destroy();
-}
-
-function require_login() {
-    if (!isset($_SESSION['username'])) {
-        header('Location: failure.php');
-        exit;
-    } 
-}
-
-
-/* Keeping original code for reference ( by JL/VM)
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-   
- $pdo = new PDO ($_POST['username'], $_POST['password']);
-}
- //user_id, user_name, user_pass,
-
-//Password Matching Validation 
-if($_POST['password'] != $_POST['confirm_pword']){ 
-$error_message = 'Passwords should match<br>'; 
-}
-=======
->>>>>>> refs/remotes/origin/master:Controller/login.php
  ob_start();
  session_start();
  if( isset($_SESSION['username'])!="" ){
-  header("Location: index.php");
+  header("Location: .php");
  }
  include_once 'connection.php';
- 
- //include 'forms/login.php';
- 
-=======
-include 'functions.php';
-      
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-   
- $pdo = new PDO ($_POST['username'], $_POST['password']);
-}
- //user_id, user_name, user_pass,
->>>>>>> origin/Jen:Controller/loginval.php
+ //include forms/register.php
 
  $error = false;
-
 
  if ( isset($_POST['btn-signup']) ) {
   
@@ -87,10 +26,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   $password = htmlspecialchars($pass);
   
   // basic name validation
-  if (empty($username)) {
+  if (empty($name)) {
    $error = true;
    $nameError = "Please enter your full name.";
-  } else if (strlen($name) < 3) {
+  } else if (strlen($username) < 3) {
    $error = true;
    $nameError = "Name must have atleat 3 characters.";
   } else if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
@@ -109,25 +48,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
    $count = mysql_num_rows($result);
    if($count!=0){
     $error = true;
-    $emailError = "The e-mail you ave provided  is already in use.";
+    $emailError = "Provided Email is already in use.";
    }
   }
   // password validation
-  if (empty($password)){
+  if (empty($pass)){
    $error = true;
    $passError = "Please enter password.";
   } else if(strlen($pass) < 6) {
    $error = true;
-   $passError = "your password must have atleast 6 characters.";
+   $passError = "Password must have atleast 6 characters.";
   }
   
   // password encrypt using SHA256();
-  $password = hash('sha256', $password);
+  $password = hash('sha256', $pass);
   
   // if there's no error, continue to signup
   if( !$error ) {
    
-   $query = "INSERT INTO users(username,email,password) VALUES('$username','$email','$password')";
+   $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
    $res = mysql_query($query);
     
    if ($res) {
@@ -142,8 +81,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
    } 
     
   }
- }
   
-
-
-*/
+  
+ }

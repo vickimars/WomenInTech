@@ -57,33 +57,6 @@ Show details
 
 <!doctype html>
 <html>
-<<<<<<< HEAD
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        echo "please work better this time";
-<<<<<<< HEAD
-<<<<<<< HEAD
-        echo "hey it's aimi here!";
-        echo "hey it's aimi here!";
-        echo "hope this works....";
-        echo "I'm here!";
-        echo "Jenny"
-=======
-        echo "Boo!";
-=======
-        echo "Boo!";
-        
->>>>>>> master
-        
-        
->>>>>>> master
-      ?>
-    </body>
-=======
 <head><title>Women in Tech Blog</title></head>
 <html lang="en">
 <head>
@@ -283,15 +256,7 @@ Show details
 </footer>
 
 </body>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
 
->>>>>>> origin/Jen
-=======
-
->>>>>>> refs/remotes/origin/master
 </html>
 
 </footer>

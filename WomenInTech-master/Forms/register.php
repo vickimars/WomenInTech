@@ -1,11 +1,9 @@
-<<<<<<< HEAD:Forms/registerform.php
 <!--<<<<<<< HEAD
+
 =======
 >>>>>>> refs/remotes/origin/master -->
 <!DOCTYPE HTML>  
-=======
 
->>>>>>> refs/remotes/origin/master:Forms/register.php
 <html>
 <head>
 <style>
@@ -14,19 +12,13 @@
 </head>
 <body>  
 <?php
-<<<<<<< HEAD:Forms/registerform.php
+
+include 'functions.php'
 include 'connection.php';
-include 'functions.php';
-=======
+require_once 'functions.php';
+>>>>>>> origin/master
 
-   
->>>>>>> refs/remotes/origin/master:Forms/register.php
-// define variables and set to empty values
-
-$usernameErr = $emailErr = $passwordErr = "";
-$username = $email = $password = $bio = "";
-<<<<<<< HEAD:Forms/registerform.php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["username"])) {
     $usernameErr = "Username is required";
   } else {
@@ -44,23 +36,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $password = test_input($_POST["password"]);
   }
+
   if (empty($_POST["bio"])) {
     $bio = "";
   } else {
     $bio = test_input($_POST["bio"]);
   }
 }
+
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
 }
-=======
->>>>>>> refs/remotes/origin/master:Forms/register.php
-?>
-    <h2>Registration</h2>
 
+<<<<<<< HEAD
+
+   
+// define variables and set to empty values
+
+$usernameErr = $emailErr = $passwordErr = "";
+$username = $email = $password = $bio = "";
+?>
+i
+   <h2>Women in Tech Blog <br>   
+Registration</h2>
+=======
+    <h2>Registration</h2>
+>>>>>>> origin/master
 <p><span class="error">* required field.</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Username: <input type="text" name="username">
@@ -86,14 +90,8 @@ echo "<br>";
 echo $password;
 echo "<br>";
 echo $bio;
-<<<<<<< HEAD:Forms/registerform.php
+
 add_user($pdo,$_POST);
-=======
-
-if(isset($_POST["submit"])){
-add_user($pdo,$_POST);}
-
->>>>>>> refs/remotes/origin/master:Forms/register.php
 ?>
 
 </body>

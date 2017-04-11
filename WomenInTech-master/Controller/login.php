@@ -4,9 +4,6 @@
  * 
  */
 
-<<<<<<< HEAD:Controller/loginval.php
-<<<<<<< HEAD:Controller/login.php
-=======
 
 
 require_once 'Forms/functions.php';
@@ -48,7 +45,6 @@ if($_POST['password'] != $_POST['confirm_pword']){
 $error_message = 'Passwords should match<br>'; 
 }
 =======
->>>>>>> refs/remotes/origin/master:Controller/login.php
  ob_start();
  session_start();
  if( isset($_SESSION['username'])!="" ){
@@ -58,15 +54,6 @@ $error_message = 'Passwords should match<br>';
  
  //include 'forms/login.php';
  
-=======
-include 'functions.php';
-      
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-   
- $pdo = new PDO ($_POST['username'], $_POST['password']);
-}
- //user_id, user_name, user_pass,
->>>>>>> origin/Jen:Controller/loginval.php
 
  $error = false;
 
