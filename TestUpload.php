@@ -1,10 +1,11 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This is a testing page, uncomment out to test our different forms for blogposts
  */
+//ADDING A POST
+//include 'Forms/uploadpost.php'
 
-include 'Forms/uploadpost.php';
+//UPDATING A POST
+include 'Forms/updatepost.php';
 
