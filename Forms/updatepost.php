@@ -42,7 +42,7 @@ include 'Forms/functions.php';
 <p id="demo"></p>
 
 <?php
-update_bland($pdo);
+
 if(isset($_POST["submit"])){
     update_post($pdo, $_POST);
 }
