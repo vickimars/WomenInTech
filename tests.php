@@ -16,31 +16,54 @@
 
 include 'Forms/connection.php';
 include 'Forms/functions.php';
-    try {
-    $results = $pdo->prepare("SELECT username, password, email FROM users WHERE username = 'aelias'");
+try {
+   $results = $pdo->prepare("SELECT username, password, email FROM users WHERE username = 'Aimi'");
 
-    $results->execute();
+  $results->execute();
+    
+  } catch (Exception $e) {
+     echo "Error!: " . $e->getMessage() . "</br>";
+        
+  }
+   
+  $stmt = $results->fetch(PDO::FETCH_ASSOC);
+var_dump($stmt);
+ 
+$users = [];
+$username = 'Aimi';
+$users = get_user($username);
+var_dump($users);
+
+$username = 'Aimi';
+    try {
+    $result = $pdo->prepare("SELECT username, email, password FROM users WHERE username = ?");
+    $result->bindParam(1, $username, PDO::PARAM_STR);
+    
+
+
+    $result->execute();
     
     } catch (Exception $e) {
         echo "Error!: " . $e->getMessage() . "</br>";
         
     }
-   
-    $stmt = $results->fetch(PDO::FETCH_ASSOC);
- var_dump($stmt);
+   $stmt2 = $result->fetch(PDO::FETCH_ASSOC);
+    return $stmt2;
+    var_dump($stmt2);
 
-//require_once 'Forms/connection.php';
     
 
-
+    
+//require_once 'Forms/connection.php';
+   
 //$results = $pdo->query("SELECT id, username, password, email, about_me FROM users");
 //echo $results->setFetchMode(PDO::FETCH_ASSOC);
 
 
-$user_info = get_user('aelias');
-var_dump($user_info);
-//include 'Forms/login.php';
-include 'Forms/register.php';?>
+//$user_info = get_user('aelias');
+//var_dump($user_info);
+include 'Forms/login.php';
+//include 'Forms/register.php';?>
 
 
 

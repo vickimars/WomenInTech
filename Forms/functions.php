@@ -36,8 +36,10 @@ function get_user($username) {
 include 'Forms/connection.php';
     
     try {
-    $results = $pdo->prepare("SELECT username, password, email, about_me FROM users WHERE username = ?");
-    $results->bindValue(1, $username, PDO::PARAM_STR);
+    $results = $pdo->prepare("SELECT username, email, password FROM users WHERE username = ?");
+    $results->bindParam(1, $username, PDO::PARAM_STR);
+    
+
 
     $results->execute();
     
@@ -45,9 +47,13 @@ include 'Forms/connection.php';
         echo "Error!: " . $e->getMessage() . "</br>";
         
     }
-   
-    return $results->fetchAll();
+   $stmt = $results->fetch(PDO::FETCH_ASSOC);
+    return $stmt;
 }
+
+    //$results->bindParam(':username', $username);
+//where userName = '$_POST[user]' AND pass = '$_POST[pass]
+
 
 function get_all_users() {
 include 'Forms/connection.php';
