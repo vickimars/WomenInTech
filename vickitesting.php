@@ -6,5 +6,5 @@
  * and open the template in the editor.
  */
 
-include 'controller/login.php';
+include 'Forms/register.php';
 ?>

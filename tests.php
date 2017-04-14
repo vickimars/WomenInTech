@@ -16,6 +16,7 @@
 
 include 'Forms/connection.php';
 include 'Forms/functions.php';
+/*
 try {
    $results = $pdo->prepare("SELECT username, password, email FROM users WHERE username = 'Aimi'");
 
@@ -28,15 +29,17 @@ try {
    
   $stmt = $results->fetch(PDO::FETCH_ASSOC);
 var_dump($stmt);
- 
+*/
+/*
 $users = [];
 $username = 'Aimi';
 $users = get_user($username);
 var_dump($users);
-
+*/
+/*
 $username = 'Aimi';
     try {
-    $result = $pdo->prepare("SELECT username, email, password FROM users WHERE username = ?");
+    $result = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
     $result->bindParam(1, $username, PDO::PARAM_STR);
     
 
@@ -48,8 +51,9 @@ $username = 'Aimi';
         
     }
    $stmt2 = $result->fetch(PDO::FETCH_ASSOC);
-    return $stmt2;
+   
     var_dump($stmt2);
+ */
 
     
 

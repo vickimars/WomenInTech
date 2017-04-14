@@ -36,7 +36,7 @@ function get_user($username) {
 include 'Forms/connection.php';
     
     try {
-    $results = $pdo->prepare("SELECT username, email, password FROM users WHERE username = ?");
+    $results = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
     $results->bindParam(1, $username, PDO::PARAM_STR);
     
 
