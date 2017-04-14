@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=your_API_key"></script>
+    <script>tinymce.init({
+        selector: '#mytextarea'
+  });
+  </script></head>
+</html>
 <?php
 include 'Controller/upload.php';
 include 'Forms/connection.php';
@@ -17,7 +25,7 @@ include 'Forms/functions.php';
 
 <p><label for="description">Description</label><br />
 
-<textarea id="description" tabindex="3" name="Post" cols="50" rows="6"></textarea>
+<textarea id="mytextarea" tabindex="3" name="Post" cols="50" rows="6"></textarea>
 
 </p>
 <p><label for="title">Username</label><br />
