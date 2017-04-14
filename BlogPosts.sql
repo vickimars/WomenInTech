@@ -1,9 +1,15 @@
-/*create table BlogPosts(
+create table BlogPosts(
 id int primary key auto_increment,
 Title varchar (100) NOT NULL, 
 Post varchar (1000) NOT NULL, 
-Author varchar (50) NOT NULL, 
-username varchar (50) NOT NULL)*/
+username varchar (50) NOT NULL,
+date DATETIME DEFAULT CURRENT_TIMESTAMP,
+phptag varchar (100),
+mojitotag varchar (100),
+funnytag varchar (100),
+journeytag varchar (100);
+
+
 
 insert BlogPosts(Title, Post, Author, username)
 values ('Women2017', 'This is all about how many women had gone into IT in 2017', 'Devina', 'Dee0610'),
