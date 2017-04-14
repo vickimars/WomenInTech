@@ -14,8 +14,8 @@
 
 <?= 
 
-include 'Forms/connection.php';
-include 'Forms/functions.php';
+require_once 'Forms/connection.php';
+require_once 'Forms/functions.php';
 /*
 try {
    $results = $pdo->prepare("SELECT username, password, email FROM users WHERE username = 'Aimi'");
@@ -37,7 +37,7 @@ $users = get_user($username);
 var_dump($users);
 */
 /*
-$username = 'Aimi';
+
     try {
     $result = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
     $result->bindParam(1, $username, PDO::PARAM_STR);
@@ -54,10 +54,22 @@ $username = 'Aimi';
    
     var_dump($stmt2);
  */
-
+/*$username = 'Aimi';
+    try {
+    $result = $pdo->prepare("SELECT password FROM users WHERE username = ?");
+    $result->bindParam(1, $username, PDO::PARAM_STR);
     
 
+
+    $result->execute();
     
+    } catch (Exception $e) {
+        echo "Error!: " . $e->getMessage() . "</br>";
+        
+    }
+   $user = $result->fetch();
+var_dump($user);
+    */
 //require_once 'Forms/connection.php';
    
 //$results = $pdo->query("SELECT id, username, password, email, about_me FROM users");
@@ -66,6 +78,14 @@ $username = 'Aimi';
 
 //$user_info = get_user('aelias');
 //var_dump($user_info);
+//
+$hash = password_hash("dogs", PASSWORD_DEFAULT);
+//$hash= '$2y$10$oRRGzrudimQtAwMMk/LIyuZ/ZMxSlkAa1mCdw7Yc8ZZ';
+if (password_verify("dogs", $hash)) {
+    echo 'Password is valid!';
+} else {
+    echo 'Invalid password.';
+}
 include 'Forms/login.php';
 //include 'Forms/register.php';?>
 

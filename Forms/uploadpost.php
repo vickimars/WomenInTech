@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=your_API_key"></script>
+    <script>tinymce.init({
+        selector: '#mytextarea'
+  });
+  </script></head>
+</html>
 <?php
 include 'Controller/upload.php';
 include 'Forms/connection.php';
@@ -17,21 +25,29 @@ include 'Forms/functions.php';
 
 <p><label for="description">Description</label><br />
 
-<textarea id="description" tabindex="3" name="Post" cols="50" rows="6"></textarea>
+<textarea id="mytextarea" tabindex="3" name="Post" cols="50" rows="6"></textarea>
 
 </p>
-
-<p><label for="title">Author</label><br />
-
-<input type="text" id="author" value="" tabindex="1" size="20" name="Author" />
-
-</p>
-
 <p><label for="title">Username</label><br />
 
 <input type="text" id="username" value="" tabindex="1" size="20" name="Username" />
 
 </p>
+<p>Tags:</p>
+<input type="hidden" name="phptag" value="0" />
+<input type="hidden" name="mojitotag" value="0" />
+<input type="hidden" name="funnytag" value="0" />
+<input type="hidden" name="journeytag" value="0" />
+
+<p><label><input type="checkbox" name ="phptag" value = "1"> PHP</label><br /></p>
+<p><label><input type="checkbox" name ="mojitotag" value = "1"> Mojito</label><br /></p>
+<p><label><input type="checkbox" name ="funnytag" value = "1"> Funny</label><br /></p>
+<p><label><input type="checkbox" name ="journeytag" value = "1"> Journey</label><br /></p>
+
+
+
+
+
 
 
 

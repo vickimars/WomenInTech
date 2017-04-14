@@ -1,8 +1,9 @@
+
 <?php
 // It contains the login form
 
 
-include 'controller/login.php';
+require_once 'controller/login.php';
 
 
 ?>
