@@ -11,10 +11,10 @@ require_once 'Forms/functions.php';
 session_start();
 
 function login($username,$password) {
-    
+  include 'Forms/connection.php';  
 	
     try {
-    $result = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
+    $result = $pdo->prepare("SELECT password FROM users WHERE username = ?");
     $result->bindParam(1, $username, PDO::PARAM_STR);
     
 
@@ -25,15 +25,15 @@ function login($username,$password) {
         echo "Error!: " . $e->getMessage() . "</br>";
         
     }
-   $user = $result->fetch(PDO::FETCH_ASSOC);
-   
+   $user = $result->fetch();
+   var_dump($user);
 	if(password_verify($password, $user['password'])) {
             $_SESSION['username'] = $username; 
             echo 'login successful';
             //header('Location: /WomenInTech/success.php');
             
         } else {
-            var_dump ($username);
+            var_dump($user);
             die("Please log in");
 	}
 }
