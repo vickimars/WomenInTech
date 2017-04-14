@@ -10,13 +10,30 @@ require_once 'Forms/functions.php';
 
 session_start();
 
-function login($username, $password) {
-	$user = get_user($username);
+function login($username,$password) {
+    
+	
+    try {
+    $result = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
+    $result->bindParam(1, $username, PDO::PARAM_STR);
+    
 
+
+    $result->execute();
+    
+    } catch (Exception $e) {
+        echo "Error!: " . $e->getMessage() . "</br>";
+        
+    }
+   $user = $result->fetch(PDO::FETCH_ASSOC);
+   
 	if(password_verify($password, $user['password'])) {
             $_SESSION['username'] = $username; 
-            header('Location: success.php');
+            echo 'login successful';
+            //header('Location: /WomenInTech/success.php');
+            
         } else {
+            var_dump ($username);
             die("Please log in");
 	}
 }
@@ -27,7 +44,7 @@ function logout() {
 
 function require_login() {
     if (!isset($_SESSION['username'])) {
-        header('Location: failure.php');
+        header('Location: /WomenInTech/failure.php');
         exit;
     } 
 }

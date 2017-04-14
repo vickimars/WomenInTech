@@ -5,6 +5,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-include 'controller/login.php';
+include 'Forms/functions.php';
+include 'Forms/register.php';
 ?>

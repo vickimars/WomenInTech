@@ -31,13 +31,15 @@ function get_user_list() {
 
 
 
-//updated Get functions (AE)
+//updated Get functions (AE) not working yet
 function get_user($username) {
 include 'Forms/connection.php';
     
     try {
-    $results = $pdo->prepare("SELECT username, password, email, about_me FROM users WHERE username = ?");
-    $results->bindValue(1, $username, PDO::PARAM_STR);
+    $results = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
+    $results->bindParam(1, $username, PDO::PARAM_STR);
+    
+
 
     $results->execute();
     
@@ -45,9 +47,13 @@ include 'Forms/connection.php';
         echo "Error!: " . $e->getMessage() . "</br>";
         
     }
-   
-    return $results->fetchAll();
+   $stmt = $results->fetch(PDO::FETCH_ASSOC);
+    return $stmt;
 }
+
+    //$results->bindParam(':username', $username);
+//where userName = '$_POST[user]' AND pass = '$_POST[pass]
+
 
 function get_all_users() {
 include 'Forms/connection.php';
@@ -64,6 +70,7 @@ include 'Forms/connection.php';
     return $results->fetchAll();
 }
 
+//This function has been tested and works!
 function add_post($pdo,$post){
 include 'Forms/connection.php';
     /*if ($id) {
@@ -80,6 +87,28 @@ $sql = 'INSERT INTO BlogPosts(Title, Post, Author, username) VALUES(?, ?, ?, ?)'
 		$results->bindValue(3, $post['Author'], PDO::PARAM_STR);
 		$results->bindValue(4, $post['Username'], PDO::PARAM_STR);
 
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Error!: " . $e->getMessage() . "<br />";
+        return false;
+    }
+    return true;
+}
+
+//updating a post
+//This function has been tested and works!
+function update_post($pdo, $post){
+    $id = $_POST['id'];
+    $title = $_POST['Title'];
+    $content = $_POST['Post'];
+    
+ $sql = 'UPDATE BlogPosts SET title = ?, post = ? WHERE id = ?';
+try {
+        $results = $pdo->prepare($sql);
+        $results->bindValue(1, $title, PDO::PARAM_STR);
+        $results->bindValue(2, $content, PDO::PARAM_STR);
+	$results->bindValue(3, $id, PDO::PARAM_STR);
+        //array(':title' => $title, ':content' => $content, ':id' => $id
         $results->execute();
     } catch (Exception $e) {
         echo "Error!: " . $e->getMessage() . "<br />";
@@ -112,6 +141,7 @@ include 'Forms/connection.php';
     }
     return true;
 }
+
 
 //Delete functions
 function delete_post($id) {

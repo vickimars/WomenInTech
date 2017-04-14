@@ -8,8 +8,16 @@ include 'controller/login.php';
 ?>
 
 <?php 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-	login($_POST['username'], $_POST['password']);
+//if($_SERVER['REQUEST_METHOD'] == 'POST') {
+//	login($_POST['username'], $_POST['password']);
+//}
+?>
+
+<?php
+
+if(isset($_POST["submit"])){
+    login($_POST['username'], $_POST['password']);
+    var_dump ($_SESSION);   
 }
 ?>
  
@@ -24,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!-- Using JL's login form
 -->
-<form action="index.php" method="post">
+<form action="" method="post">
 <div>
 <label for="username">Username: </label>
 <input name="username" type="text"/>
@@ -35,5 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 <input name="password" type="password"/>
 </div>
 
-<button type="submit">Login</button>
+<!--<button type="submit">Login</button>-->
+<input type="submit" value="Login" tabindex="6" id="submit" name="submit"/>
 </form>
+
