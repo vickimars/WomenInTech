@@ -11,7 +11,6 @@ AE
 
 */
 
-
 create database BlogDatabase;
 use BlogDatabase;
 
