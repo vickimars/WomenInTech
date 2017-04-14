@@ -79,13 +79,16 @@ include 'Forms/connection.php';
     $sql = 'INSERT INTO posts(title, post, author, username, date) VALUES(?, ?, ?, ?, ?)';
     }*/
 
-$sql = 'INSERT INTO BlogPosts(Title, Post, Author, username) VALUES(?, ?, ?, ?)';
+$sql = 'INSERT INTO BlogPosts(Title, Post, username, phptag, mojitotag, funnytag, journeytag) VALUES(?, ?, ?, ?, ?, ? ,?)';
     try {
         $results = $pdo->prepare($sql);
         $results->bindValue(1, $post['Title'], PDO::PARAM_STR);
         $results->bindValue(2, $post['Post'], PDO::PARAM_STR);
-		$results->bindValue(3, $post['Author'], PDO::PARAM_STR);
-		$results->bindValue(4, $post['Username'], PDO::PARAM_STR);
+		$results->bindValue(3, $post['Username'], PDO::PARAM_STR);
+                $results->bindValue(4, $post['phptag'], PDO::PARAM_STR);
+                $results->bindValue(5, $post['mojitotag'], PDO::PARAM_STR);
+                $results->bindValue(6, $post['funnytag'], PDO::PARAM_STR);
+                $results->bindValue(7, $post['journeytag'], PDO::PARAM_STR);
 
         $results->execute();
     } catch (Exception $e) {
@@ -120,7 +123,7 @@ try {
 
 //This function has been tested and works!
 function add_user($pdo, $user){
-include 'Forms/connection.php';
+include 'Forms/connection.php'; 
  //userdate to include in db?   
      if ($id) {
         $sql = 'UPDATE users SET username = ?, password = ?, email = ? about_me = ?'; 
