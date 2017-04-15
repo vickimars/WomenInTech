@@ -16,8 +16,9 @@ require_once 'controller/login.php';
 <?php
 
 if(isset($_POST["submit"])){
-    login($_POST['username'], $_POST['password']);
-    var_dump ($_SESSION);   
+    $pass = $_POST['password'];
+    login($_POST['username'], $pass);
+     
 }
 ?>
  

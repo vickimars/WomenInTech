@@ -8,11 +8,11 @@
 
 require_once 'Forms/functions.php';
 
-session_start();
 
-function login($username,$password) {
+
+function login($username,$pass) {
   include 'Forms/connection.php';  
-	
+session_start();	
     try {
     $result = $pdo->prepare("SELECT password FROM users WHERE username = ?");
     $result->bindParam(1, $username, PDO::PARAM_STR);
@@ -26,15 +26,17 @@ function login($username,$password) {
         
     }
    $user = $result->fetch();
-   var_dump($user);
-	if(password_verify($password, $user['password'])) {
-            $_SESSION['username'] = $username; 
-            echo 'login successful';
-            //header('Location: /WomenInTech/success.php');
+   var_dump($user['password']);
+
+	if(password_verify($pass, $user['password'])) {
+            $_SESSION["username"] = $username; 
+            echo "login successful, ";
+            echo ($_SESSION['username'])."!";
+            header('Location: /WomenInTech/success.php');
             
         } else {
-            var_dump($user);
-            die("Please log in");
+           
+            echo "Password incorrect";
 	}
 }
 

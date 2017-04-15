@@ -130,11 +130,11 @@ include 'Forms/connection.php';
     } else {
     $sql = 'INSERT INTO users(username, password, email, about_me) VALUES(?, ?, ?, ?)';
     }
-     
+    $hash =  password_hash($user['password'], PASSWORD_DEFAULT);
     try {
         $results = $pdo->prepare($sql);
         $results->bindValue(1, $user['username'], PDO::PARAM_STR);
-		$results->bindValue(2, password_hash($user['password'], PASSWORD_DEFAULT), PDO::PARAM_STR);
+		$results->bindValue(2,$hash, PDO::PARAM_STR);
 		$results->bindValue(3, $user['email'], PDO::PARAM_STR);
 		$results->bindValue(4, $user['bio'], PDO::PARAM_STR);
         $results->execute();
