@@ -4,32 +4,26 @@
  * 
  */
 
-
-
-require_once 'Forms/functions.php';
-
-
-
 function login($username,$pass) {
-  include 'Forms/connection.php';  
+  include '../Controller/connection.php';  
 session_start();	
     try {
+        
     $result = $pdo->prepare("SELECT password FROM users WHERE username = ?");
     $result->bindParam(1, $username, PDO::PARAM_STR);
-    
-
-
     $result->execute();
     
     } catch (Exception $e) {
+        
         echo "Error!: " . $e->getMessage() . "</br>";
         
     }
-   $user = $result->fetch();
-   var_dump($user['password']);
+    
+$user = $result->fetch();
+   
 
 	if(password_verify($pass, $user['password'])) {
-            $_SESSION["username"] = $username; 
+            $_SESSION['username'] = $username; 
             echo "login successful, ";
             echo ($_SESSION['username'])."!";
             header('Location: /WomenInTech/success.php');
@@ -37,6 +31,7 @@ session_start();
         } else {
            
             echo "Password incorrect";
+            header('Location: /WomenInTech/failure.php');
 	}
 }
 
@@ -46,7 +41,7 @@ function logout() {
 
 function require_login() {
     if (!isset($_SESSION['username'])) {
-        header('Location: /WomenInTech/failure.php');
+        header('Location: /WomenInTech/userlogin.php');
         exit;
     } 
 }

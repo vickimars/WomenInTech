@@ -7,10 +7,10 @@
  */
 
 function get_post_list() {
-include 'connection.php';
+include '../Controller/connection.php';
   
     try {
-    return $db->query('SELECT post_id, title, post, author, username, date FROM posts');
+    return $pdo->query('SELECT post_id, title, post, author, username, date FROM posts');
     } catch (Exception $e) {
         echo "Error!: " . $e->getMessage() . "</br>";
         return array();
@@ -18,10 +18,10 @@ include 'connection.php';
 }
 
 function get_user_list() {
-    //include 'connection.php';
+include '../Controller/connection.php';
     
     try {
-    return $db->query('SELECT id, username, pword, email, user_date, user_level FROM users');
+    return $pdo->query('SELECT id, username, pword, email, user_date, user_level FROM users');
     //userdate to add to db?
     } catch (Exception $e) {
         echo "Error!: " . $e->getMessage() . "</br>";
@@ -33,7 +33,7 @@ function get_user_list() {
 
 //updated Get functions (AE) not working yet
 function get_user($username) {
-include 'Forms/connection.php';
+require_once '../Forms/connection.php';
     
     try {
     $results = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
@@ -56,7 +56,7 @@ include 'Forms/connection.php';
 
 
 function get_all_users() {
-include 'Forms/connection.php';
+include '../Forms/connection.php';
     
     try {
     $results = $pdo->prepare("SELECT * FROM users");
@@ -72,7 +72,7 @@ include 'Forms/connection.php';
 
 //This function has been tested and works!
 function add_post($pdo,$post){
-include 'Forms/connection.php';
+include '../Controller/connection.php';
     /*if ($id) {
         $sql = 'UPDATE posts SET title = ?, post = ?, author = ?, username = ?, date = ? WHERE id = ?';
     } else {
@@ -101,6 +101,7 @@ $sql = 'INSERT INTO BlogPosts(Title, Post, username, phptag, mojitotag, funnytag
 //updating a post
 //This function has been tested and works!
 function update_post($pdo, $post){
+require_once '../Controller/connection.php';
     $id = $_POST['id'];
     $title = $_POST['Title'];
     $content = $_POST['Post'];
@@ -123,7 +124,7 @@ try {
 
 //This function has been tested and works!
 function add_user($pdo, $user){
-include 'Forms/connection.php'; 
+include '../Controller/connection.php'; 
  //userdate to include in db?   
      if ($id) {
         $sql = 'UPDATE users SET username = ?, password = ?, email = ? about_me = ?'; 
@@ -148,7 +149,7 @@ include 'Forms/connection.php';
 
 //Delete functions
 function delete_post($id) {
-    //include 'connection.php';
+require_once '../Controller/connection.php';
     $sql = 'DELETE FROM posts WHERE id = ?';
   
     try {
@@ -163,7 +164,7 @@ function delete_post($id) {
 }
 
 function delete_user($id) {
-    //include 'connection.php';
+require_once '../Controller/connection.php';
     $sql = 'DELETE FROM users WHERE id = ?';
   
     try {

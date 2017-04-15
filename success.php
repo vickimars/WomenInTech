@@ -1,15 +1,17 @@
 <?php
 
-/* 
- * Tester page to see if Login works
- */
-
+session_start();
+ include 'Controller/connection.php'; 
+//include 'session.php';
+$login_session = $_SESSION['username'];
 ?>
 
 <html>
     <body>
         <h1>Success!
         </h1>
+        <b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
+        <b id="logout"><a href="/WomenInTech/Forms/logout.php">Log Out</a></b>
     </body>
     
 </html>

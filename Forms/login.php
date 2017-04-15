@@ -1,17 +1,8 @@
 <?php
-// It contains the login form
-
-
-require_once 'controller/login.php';
-
-
+// Login Form
+require_once '../Controller/login.php';
 ?>
 
-<?php 
-//if($_SERVER['REQUEST_METHOD'] == 'POST') {
-//	login($_POST['username'], $_POST['password']);
-//}
-?>
 
 <?php
 
