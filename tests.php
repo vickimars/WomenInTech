@@ -79,9 +79,9 @@ var_dump($user);
 //$user_info = get_user('aelias');
 //var_dump($user_info);
 //
-$hash = password_hash("dogs", PASSWORD_DEFAULT);
-//$hash= '$2y$10$oRRGzrudimQtAwMMk/LIyuZ/ZMxSlkAa1mCdw7Yc8ZZ';
-if (password_verify("dogs", $hash)) {
+//$hash = password_hash("dogs", PASSWORD_DEFAULT);
+$hash= '$2y$10$U.Kz/PEubaCCitBD/56a3uH5gTk5n4KhTC7HLXAs5syvsjhXLkB.C';
+    if (password_verify('testing', $hash)) {
     echo 'Password is valid!';
 } else {
     echo 'Invalid password.';
