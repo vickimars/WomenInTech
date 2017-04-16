@@ -11,9 +11,10 @@
 </head>
 <body>
 <?php
-include 'Controller/upload.php';
-include 'Forms/connection.php';
-include 'Forms/functions.php';
+session_start();
+include '../Controller/upload.php';
+include '../Controller/connection.php';
+include '../Forms/functions.php';
 ?>
 <!-- New Post Form -->
 
@@ -32,10 +33,19 @@ include 'Forms/functions.php';
         <textarea id="mytextarea" tabindex="3" name="Post" cols="50" rows="6"></textarea>
     </p>
 
+
 <p><label for="title">Username</label><br />
 
 <input type="text" id="username" value="" tabindex="1" size="20" name="Username" />
 
+
+<input type="text" id="username" value="" tabindex="1" size="20" name="Username" />-->
+<p>
+ Upload a featured image:   
+</p>
+<p>
+<input name="image" type="file" id="file">
+</p>
 </p>
 <p>Tags:</p>
 <input type="hidden" name="phptag" value="0" />
@@ -65,6 +75,9 @@ include 'Forms/functions.php';
 <?php
 if(isset($_POST["submit"])){
     add_post($pdo, $_POST);
+}
+if(isset($_POST["image"])){
+	upload_file();
 }
 ?>
 <!-- pop-up-->

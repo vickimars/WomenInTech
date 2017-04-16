@@ -11,7 +11,6 @@ AE
 
 */
 
-
 create database BlogDatabase;
 use BlogDatabase;
 
@@ -20,7 +19,7 @@ create table users(
 id int primary key auto_increment,
 username varchar (50) NOT NULL, 
 email varchar (50) NOT NULL, 
-password varchar (50) NOT NULL,
+password varchar (255) NOT NULL,
 about_me varchar (50) NOT NULL)
 
 insert users(firstname, surname, username, email, password, about_me)

@@ -7,7 +7,7 @@
 <title>Upload your blog</title>
         <h1>Upload your blog</h1>
             <body>
-<form method="post"  enctype="multipart/form-data" action="upload.php">
+<form method="post"  enctype="multipart/form-data" action="uploadDK.php">
 <table>
 <tr>
 <td width="250">Name: </td>
