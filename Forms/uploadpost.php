@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head><script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=your_API_key"></script>
-    <script>tinymce.init({
-        selector: '#mytextarea'
-  });
-  </script></head>
-</html>
+<head>
+    <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+            plugins: ['image','link']
+        });
+    </script>
+</head>
+<body>
 <?php
 include 'Controller/upload.php';
 include 'Forms/connection.php';
@@ -23,11 +27,11 @@ include 'Forms/functions.php';
 
 </p>
 
+
 <p><label for="description">Description</label><br />
+        <textarea id="mytextarea" tabindex="3" name="Post" cols="50" rows="6"></textarea>
+    </p>
 
-<textarea id="mytextarea" tabindex="3" name="Post" cols="50" rows="6"></textarea>
-
-</p>
 <p><label for="title">Username</label><br />
 
 <input type="text" id="username" value="" tabindex="1" size="20" name="Username" />
@@ -45,12 +49,6 @@ include 'Forms/functions.php';
 <p><label><input type="checkbox" name ="journeytag" value = "1"> Journey</label><br /></p>
 
 
-
-
-
-
-
-
 <!--<p><label for="post_tags">Tags</label>
 
 <input type="text" value="" tabindex="5" size="16" name="post_tags" id="post_tags" /></p>-->
@@ -60,7 +58,6 @@ include 'Forms/functions.php';
 <input type="hidden" name="post_type" id="post_type" value="post" />
 
 <input type="hidden" name="action" value="post" />
-
 
 
 <p id="demo"></p>
@@ -86,3 +83,7 @@ function myFunction() {
 </form>
 
 </div>
+
+</body>
+
+</html>
