@@ -17,6 +17,20 @@ include '../Controller/connection.php';
     }
 }
 
+function get_user_posts($username) {
+include '../Controller/connection.php';
+  
+    try {
+    $results =$pdo->prepare('SELECT id, Title, Post, username, date FROM BlogPosts WHERE username = ?');
+      $results->bindParam(1, $username, PDO::PARAM_STR);
+    $results->execute();
+    } catch (Exception $e) {
+        echo "Error!: " . $e->getMessage() . "</br>";
+    }
+    $user_posts = $results->fetchAll();
+    return $user_posts;
+}
+
 function get_user_list() {
 include '../Controller/connection.php';
     
@@ -31,9 +45,9 @@ include '../Controller/connection.php';
 
 
 
-//updated Get functions (AE) not working yet
+//updated Get functions (AE) working!!
 function get_user($username) {
-require_once '../Forms/connection.php';
+require_once '../Controller/connection.php';
     
     try {
     $results = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");
@@ -47,8 +61,8 @@ require_once '../Forms/connection.php';
         echo "Error!: " . $e->getMessage() . "</br>";
         
     }
-   $stmt = $results->fetch(PDO::FETCH_ASSOC);
-    return $stmt;
+   $account = $results->fetch(PDO::FETCH_ASSOC);
+    return $account;
 }
 
     //$results->bindParam(':username', $username);
@@ -56,7 +70,7 @@ require_once '../Forms/connection.php';
 
 
 function get_all_users() {
-include '../Forms/connection.php';
+include '../Controller/connection.php';
     
     try {
     $results = $pdo->prepare("SELECT * FROM users");
@@ -84,7 +98,7 @@ $sql = 'INSERT INTO BlogPosts(Title, Post, username, phptag, mojitotag, funnytag
         $results = $pdo->prepare($sql);
         $results->bindValue(1, $post['Title'], PDO::PARAM_STR);
         $results->bindValue(2, $post['Post'], PDO::PARAM_STR);
-		$results->bindValue(3, $post['Username'], PDO::PARAM_STR);
+		$results->bindValue(3, $_SESSION['username'], PDO::PARAM_STR);
                 $results->bindValue(4, $post['phptag'], PDO::PARAM_STR);
                 $results->bindValue(5, $post['mojitotag'], PDO::PARAM_STR);
                 $results->bindValue(6, $post['funnytag'], PDO::PARAM_STR);
@@ -176,4 +190,36 @@ require_once '../Controller/connection.php';
         return false;
     }
     return true;
+}
+const AllowedTypes = ['image/jpeg', 'image/jpg'];
+const InputKey = 'file';
+//Uploading an image
+function upload_file() {
+	if (empty($_FILES[InputKey])) {	//handle error
+		trigger_error(); //die("File Missing!")
+	}
+
+	if ($_FILES[InputKey]['error'] > 0) { //handle error
+		trigger_error(); //die("Handle the error! " . $_FILES[InputKey]['error'])
+	}
+
+
+	if (!in_array($_FILES[InputKey]['type'], AllowedTypes)) {
+		trigger_error();// die("Handle File Type Not Allowed: " . $_FILES[InputKey]['type']
+	}
+
+
+	$tmpFile = $_FILES[InputKey]['tmp_name'];
+
+	//DOMAIN SPECIFIC:  eg., move the file
+	$dstFile = '../Uploads/' . $_FILES[InputKey]['name'];
+
+	if (!move_uploaded_file($tmpFile, $dstFile)) {
+		trigger_error(); //prev die("Handle Error")
+	}
+		
+	//Clean up the temp file
+	if (file_exists($tmpFile)) {
+		unlink($tmpFile); 
+	}
 }
