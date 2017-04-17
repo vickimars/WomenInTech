@@ -5,7 +5,7 @@
  */
 
 function login($username,$pass) {
-  include '../Controller/connection.php';  
+  include 'Controller/connection.php';  
 session_start();	
     try {
         
@@ -26,7 +26,7 @@ $user = $result->fetch();
             $_SESSION['username'] = $username; 
             echo "login successful, ";
             echo ($_SESSION['username'])."!";
-            header('Location: /WomenInTech/success.php');
+            header('Location: /WomenInTech/successful.php');
             
         } else {
            

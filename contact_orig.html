@@ -97,13 +97,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"> </div>
 		<div class="contact-left1">
-			<h3>Contact Us With <span>Any Queston</span></h3>
+			<h3>Contact<span>the Bridget Coders</span></h3>
 			<div class="in-left">
-				<form>
-					<input type="text" placeholder="Your Name:" required=" ">
+                                <form name="ContactUs" method="post" action="send_form_email.php">
+					<span class="error">*required field<label for="first_name">First Name *</label>
+                                        <input type="text" placeholder="Your Name:" required=" ">
 					<input type="text" placeholder="Phone Number:" required=" ">
-					<input type="text" placeholder="E-mail:" required=" ">				
+					<input type="text" placeholder="E-mail:" required=" ">	
+                                        
+                                          <label for="last_name">Last Name *</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="last_name" maxlength="50" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="email">Email Address *</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="email" maxlength="80" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="telephone">Telephone Number</label>
+
+  <input  type="text" name="telephone" maxlength="30" size="30">
+
+  <label for="comments">Comments *</label>
+
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+
+  <input type="submit" value="Submit">
+
+</form>
 				</form>
+                            
+                            
 			</div>
 			<div class="in-right">
 				<form>

@@ -23,8 +23,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="WomenInTech-master/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="WomenInTech-master/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="web/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
 <script src="web/js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						  </button>
-						   <a class="navbar-brand" href="index.php"><span>Q</span>uickly</a>
+						   <a class="navbar-brand" href="index.php"><span></span>WomenInTech</a>
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
@@ -246,7 +246,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 									<div class="facts">
 									  <div class="tab_list">
-										<a href="womenintech-master/web/images/funnybaby.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+
 											<img src="images/7.jpg" alt=" " class="img-responsive" />
 										</a>
 									  </div>
@@ -257,7 +257,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="facts">
 									   <div class="tab_list">
-										<a href="womenintech-master/web/images/women2.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+										<a href="web/images/women2.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
 											<img src="images/8.jpg" alt=" " class="img-responsive" />
 										</a>
 									  </div>
@@ -415,22 +415,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="four-fig">
 						<div class="four-fig1">
 							<a href="Womenintech" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="WomenIntech-master/web/images/womenintech.jpg" class="img-responsive" alt=" " /> 
+								<img src="web/images/womenintech.jpg" class="img-responsive" alt=" " /> 
 							</a>
 						</div>
 						<div class="four-fig1">
 							<a href=WomenIntech" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="WomenInTech-master/web/images/bridgetjones.jpeg" class="img-responsive" alt=" " />
+								<img src="web/images/bridgetjones.jpeg" class="img-responsive" alt=" " />
 							</a>
 						</div>
 						<div class="four-fig1">
 							<a href="WomenInTech" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="WomenInTech-master/web/images/women2.jpg" class="img-responsive" alt=" " />
+								<img src="web/images/women2.jpg" class="img-responsive" alt=" " />
 							</a>
 						</div>
                                                 <div class="four-fig1">
 							<a href="WomenInTech" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="WomenInTechVM/images/baby.jpg" class="img-responsive" alt=" " />
+
 							</a>
 						</div>
 						<div class="clearfix"> </div>
