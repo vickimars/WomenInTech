@@ -1,3 +1,14 @@
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>  
+
+
+<h2>Contact Us</h2>
+<p><span class="error">* required field.</span></p>
 <form name="ContactUs" method="post" action="send_form_email.php">
 <table width="450px">
 <tr>
@@ -42,7 +53,7 @@
 </tr>
 <tr>
  <td colspan="2" style="text-align:center">
-  <input type="submit" value="Submit">   <a href="http://www.freecontactform.com/email_form.php">Email Form</a>
+  <input type="submit" value="Submit">
  </td>
 </tr>
 </table>
