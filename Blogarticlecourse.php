@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Post - GetIntoTest Course Outline</title>
+    <title>Blog Post - Sky's Get Into Test Course</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -71,29 +71,9 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>GetIntoTech Course</h1>
-
-                <!-- Author -->
-                <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
-                </p>
-
-                <hr>
-
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on April 25, 2017 at 20:40 PM</p>
-
-                <hr>
-
-                <!-- Preview Image -->
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-
-                <hr>
-
-                <!-- Post Content -->
-                <p class="lead">Ladies who are interested in learning tech skills! 
-                If you have an interest in coding and technology then look no further then the GetIntoTech course. This is a new 3 month technology coding course designed for women that want to learn all aspects and gain new skills. The course will help to inspire and empower, you'll gain confidence to become the next generation role model in software development.</p>
-                <p>This course is for women of all ages and for those who want a Full-Time immersion course which covers all aspects of software delivery and offers a mixture of theoretical, practical and project based modules. In addition we will also develop some of the softer skills needed to help secure a technology role.</p>
+            <p class="lead">Ladies who are interested in learning tech skills! 
+                If you have an interest in coding and technology then look no further then Sky's Get Into Tech course. This is a new 3 month technology coding course designed for women that want to learn all aspects of technology and gain new skills. The course will help to inspire and empower women, you'll gain confidence to become the next generation role model in software development.</p>
+                <p>This course is for women of all ages and for those who want a full-time immersion course which covers all aspects of software delivery and offers a mixture of theoretical, practical and project based modules. In addition we will also develop some of the softer skills needed to help secure a technology role.</p>
                 <p>On this course you’ll learn the basics of web development, covering topics such as:
 
                 <p>Awareness of Technology and current trends in software development</p>
@@ -118,7 +98,7 @@
              <li>Job application and interviewing techniques for technology roles</li>
                     </ul>
          
-        <p>We're interested in comments from those who have been involved in the GetIntoTech course!</p>
+        <p>We're interested in comments from those who have been involved in the Sky's Get Into Tech course!</p>
         <p>Or if you're interested in being involved leave us a comment below.</p>
 
                 <hr>
@@ -141,7 +121,7 @@
                 <!-- Posted Comments -->
 
                 <!-- Comment -->
-                <h4>The GetIntoTech course starts with a full 5 day immersion week. After the first week, you'll be paired up to hangout with your tutor every Tuesday. 
+                <h4>Sky's Get Into Tech course starts with a full 5 day immersion week. After the first week, you'll be paired up to hangout with your tutor every Tuesday. 
                 Classes will take place every Thursday with tasks and assignments set to present on Tuesday's hangouts.
                 </h4>
                 
@@ -481,7 +461,7 @@
                         <small>Thursday</small>
                         <ul>
                             <li>Showcase</li> 
-                                </ul>                                
+                                </ul>                               
              
                     </div>
                 </div>  
