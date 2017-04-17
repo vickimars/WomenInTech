@@ -246,7 +246,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 									<div class="facts">
 									  <div class="tab_list">
-										<a href="womenin\techVM/web/images/funnybaby.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+
 											<img src="images/7.jpg" alt=" " class="img-responsive" />
 										</a>
 									  </div>
@@ -430,7 +430,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
                                                 <div class="four-fig1">
 							<a href="WomenInTech" class="b-link-stripe b-animate-go   swipebox"  title="">
-								<img src="images/baby.jpg" class="img-responsive" alt=" " />
+
 							</a>
 						</div>
 						<div class="clearfix"> </div>
