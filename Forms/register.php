@@ -7,7 +7,8 @@
 </head>
 <body>  
 <?php
-
+include 'functions.php';
+include '../Controller/connection.php';
    
 // define variables and set to empty values
 

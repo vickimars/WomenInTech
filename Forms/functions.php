@@ -140,11 +140,11 @@ try {
 function add_user($pdo, $user){
 include '../Controller/connection.php'; 
  //userdate to include in db?   
-     if ($id) {
+    /*if ($id) {
         $sql = 'UPDATE users SET username = ?, password = ?, email = ? about_me = ?'; 
-    } else {
+    } else {*/
     $sql = 'INSERT INTO users(username, password, email, about_me) VALUES(?, ?, ?, ?)';
-    }
+    //}
     $hash =  password_hash($user['password'], PASSWORD_DEFAULT);
     try {
         $results = $pdo->prepare($sql);
