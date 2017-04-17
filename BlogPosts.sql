@@ -1,7 +1,7 @@
 create table BlogPosts(
 id int primary key auto_increment,
 Title varchar (100) NOT NULL, 
-Post varchar (1000) NOT NULL, 
+Post varchar (10000) NOT NULL, 
 username varchar (50) NOT NULL,
 date DATETIME DEFAULT CURRENT_TIMESTAMP,
 phptag varchar (100),
