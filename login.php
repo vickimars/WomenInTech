@@ -63,8 +63,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  </ul>
 						  <div class="sign-in">
 							<ul>
-						<li><a href="forms/login.php">Sign In </a>/</li>
-								<li><a href="forms/register.php"> Register</a></li>
+						<li><a href="login.php">Sign In </a>/</li>
+								<li><a href="register.php"> Register</a></li>
 							</ul>
 							</div>
 						</div><!-- /.navbar-collapse -->
@@ -83,98 +83,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- about-page -->
 	<div class="about">
 			<div class="about-text">
-				<h3>About Us</h3>
+				<h3>Hello fellow Bridget Coder!</h3>
 			</div>	
 			<div class="about-info">
-				<h4>We are five aspiring female coders.</h4>
+				
                                 <p></p>
 
 				<div class="col-md-5 about-info-left">
-					<img src="web/images/womenintech_cropped.jpg" class="img-responsive" alt=" " height="500" width="550"/>
+					<h4></h4>
+                                        <p><?=include 'Forms/login.php';?></p>
 				</div>
 				<div class="col-md-7 about-info-right">
-					<h4>Who Are We?</h4>
-					                                <p> Vicki, Aimi, Christina, Dee and Jenny are five talented, aspiring coders that love to talk code and blog about their experiences.
-                                                                        We started our coding journey in January 2017 with the Get Into Tech course - this is our final project.</p>
-				</div>
+					
+                                </div>
 				<div class="clearfix"> </div>
 				
 			</div>
 			<div class="about-grid">
-				<div class="col-md-4 about-text-info">
-					<h4>Why Bridget?</h4>
-					
-					<p class="about-pgh">We thought of our coding journey to be a lot like Bridget on her journey of finding the ultimate man.
-                                        Where the men are coding skills. And they don't love us back.</p>
-				</div>
-				<div class="col-md-4 about-text-info">
-					<h4>Our Skills</h4>
-					
-					<p class="about-pgh">Over the last 14 weeks we have learned the basics of how the internet works, the difference between front-end and back-end, and how they talk to each other.
-                                        Our main language has been PHP, coupled with some snazzy HTML and CSS and we've also created a database for our user and blog information using mySQL.</p>
-				</div>
-				<div class="col-md-4 about-text-info">
-					<h4>What we've enjoyed most</h4>
-					
-					<p class="about-pgh">It's been great getting to know some wonderful and inspiring like-minded ladies. We've come away with skills we didn't have before we started and have a new found appreciation of what goes into the web applications we use every day.</p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="about-team">
-				<div class="about-text">
-					<h3 class="ind">The Bridget Coders</h3>
-				</div>	
-				<div class="row">
-					<div class="col-sm-6 col-md-3 about-team-grids">
-						<div class="thumbnail">
-							<img src="images/15.jpg" alt="" class="img-responsive" />
-							<div class="caption">
-								<h4><a href="#">Aimi Elias</a></h4>
-								<p>vero eos et accusamus et iusto odio dignissimos ducimus</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3 about-team-grids">
-						<div class="thumbnail">
-							<img src="images/16.jpg" alt="" class="img-responsive" />
-							<div class="caption">
-								<h4><a href="#">Christina Groocott</a></h4>
-								<p>vero eos et accusamus et iusto odio dignissimos ducimus</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3 about-team-grids">
-						<div class="thumbnail">
-							<img src="images/17.jpg" alt="" class="img-responsive" />
-							<div class="caption">
-								<h4><a href="#">Dee Kaur</a></h4>
-								<p>vero eos et accusamus et iusto odio dignissimos ducimus</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3 about-team-grids">
-						<div class="thumbnail">
-							<img src="images/18.jpg" alt=""class="img-responsive" />
-							<div class="caption">
-								<h4><a href="#">Jenny Leung</a></h4>
-								<p>vero eos et accusamus et iusto odio dignissimos ducimus</p>
-							</div>
-						</div>
-					</div>
-                                    			<div class="col-sm-6 col-md-3 about-team-grids">
-						<div class="thumbnail">
-							<img src="images/18.jpg" alt=""class="img-responsive" />
-							<div class="caption">
-								<h4><a href="#">Vicki Marshall</a></h4>
-								<p>vero eos et accusamus et iusto odio dignissimos ducimus</p>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-			
-		</div>
+				
 <!-- //about-page -->
 		</div>
 	</div>

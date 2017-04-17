@@ -33,14 +33,6 @@ $username = $email = $password = $bio = "";
 </form>
 
 <?php
-echo "<h2>Your Input:</h2>";
-echo $username;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $password;
-echo "<br>";
-echo $bio;
 
 if(isset($_POST["submit"])){
 add_user($pdo,$_POST);}
