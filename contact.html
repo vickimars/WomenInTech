@@ -7,7 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-
+<title>Bridget Coder's Diary</title>
+<!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -15,8 +16,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="womenintech-master/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="womenintech-master/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -44,8 +45,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<nav class="navbar navbar-default">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
 						  </button>
-						   <a class="navbar-brand" href="index.php"><span>Q</span>uickly</a>
+						   <a class="navbar-brand" href="index.php">Bridget Coder's Diary</a>
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,13 +59,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						 <ul class="nav navbar-nav">
 							<li class="hvr-bounce-to-bottom"><a href="index.php">Home</a></li>
 							<li class="hvr-bounce-to-bottom"><a href="about.html">About</a></li>
-		
 							<li class="hvr-bounce-to-bottom active"><a href="contact.html">Contact Us</a></li>
 						  </ul>
 						  <div class="sign-in">
 							<ul>
-								<li><a href="forms/login.php">Sign In </a>/</li>
-								<li><a href="register/login.php">Register</a></li>
+								<li><a href="login.html">Sign In </a>/</li>
+								<li><a href="register.html">Register</a></li>
 							</ul>
 							</div>
 						</div><!-- /.navbar-collapse -->
@@ -78,47 +83,89 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- contact -->
 	<div class="contact">
 		<div class="contact-left">
-			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1378.8162161560147!2d-0.3289941187728126!3d51.48709614729218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd448ed81eddc5d7b!2sSky+Plc!5e0!3m2!1sen!2suk!4v1492468536552" frameborder="0" style="border:0"></iframe>
+		
+                </iframe></div>
 		<div class="contact-right">
-			<p class="phn">0800 2481 5842</p>
-			<p class="phn-bottom">109 High Street
-					<span>Walthamstow E17</span></p>
-			<p class="lom">.</p>
+			
+			<p class="phn-bottom">We can be found coding away at
+					<span>Grant Way, TW7 5QD</span></p>
+			<p class="lom">We are here every Thursday evening.</p>
 		</div>
 		<div class="clearfix"> </div>
 		<div class="contact-left1">
-			<h3>Contact Us With <span>Any Questions</span></h3>
+			<h3>Contact<span>the Bridget Coders</span></h3>
 			<div class="in-left">
-				<form>
-					<input type="text" placeholder="Your Name:" required=" ">
-					<input type="text" placeholder="Phone Number:" required=" ">
-					<input type="text" placeholder="E-mail:" required=" ">				
+                                <form name="ContactUs" method="post" action="send_form_email.php">
+                                    <p><span class="error">*required field</span></p>
+                                        <label for="first_name">First Name *</label>
+                                        <input  type="text" name="first_name" maxlength="50" size="30">
+                                        <label for="last_name">Last Name *</label>
+                                        <input  type="text" name="last_name" maxlength="50" size="30">
+
+                                        <label for="email">Email Address *</label>
+
+                                        <input  type="text" name="email" maxlength="80" size="30">
+
+                                        <label for="telephone">Telephone Number</label>
+
+                                        <input  type="text" name="telephone" maxlength="30" size="30">
+
+  
+
+</form>
 				</form>
+                            
+                            
 			</div>
 			<div class="in-right">
 				<form>
-					<textarea placeholder="Message:" required=" "></textarea>
+					<textarea placeholder="Comments:" required=" " maxlength="1000"></textarea>
 					<input type="submit" value="Submit">
 				</form>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="contact-right1">
-		
-			<p>Please feel free to contact us at www.bridgetcodesdiary.com.</p>
-			<ul>
+			<h3>Find Us On <span>Social Media</span></h3>
+			<h4>We can be social,  <label>if we want to be.</label></h4>
 			
+			<ul>
+				<li><a href="#" class="g1"> </a></li>
+				<li><a href="#" class="p1"> </a></li>
+				<li><a href="#" class="facebook1"> </a></li>
+				<li><a href="#" class="twitter1"> </a></li>
+			</ul>
 		</div>
 		<div class="clearfix"> </div>
 	</div>
 <!-- //contact -->
-
-				</div>
+		</div>
+	</div>
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
 				
+				</div>
+				<div class="col-md-3 footer-grid">
+					
+				</div>
+				<div class="col-md-3 footer-grid">
+					
+				</div>
+				<div class="col-md-3 footer-grid">
+					
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
 		</div>
 	</div>
 	<div class="footer-bottom">
 		<div class="container">
+			
 		</div>
 	</div>
 <!-- //footer -->

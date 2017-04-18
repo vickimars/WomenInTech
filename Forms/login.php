@@ -19,28 +19,29 @@ if(isset($_POST["submit"])){
 <head><title>User Log In</title></head>
 <body>
 
-    <h5><br>
+    <h3><br>
         Log in:<br>
-</h5>
+</h3>
 
 <!-- Using JL's login form
 -->
 <form action="" method="post">
 <div>
 <p>
-<label for="username">Username: </label>
+<h5><label for="username">Username: </label></h5>
 <input name="username" type="text"/>
 </p>
 </div>
 <div>
     <p>
-<label for="password">Password: </label>
+    <h5><label for="password">Password: </label></h5>
 <input name="password" type="password"/>
 </p>
 </div>
-    <p>
+    <p><p>
+    <div>
 <!--<button type="submit">Login</button>-->
-<input type="submit" value="Login" tabindex="6" id="submit" name="submit"/>
-    </p>
+<input type="submit" value="Login" tabindex="6" id="submit" name="submit"/></p>
+</p></div>
 </form>
 

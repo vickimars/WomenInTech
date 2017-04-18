@@ -85,21 +85,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="about-text">
 				<h3>Hello fellow Bridget Coder!</h3>
 			</div>	
-			<div class="about-info">
-				
-                                <p></p>
-
-				<div class="col-md-5 about-info-left">
-					<h4></h4>
-                                        <p><?=include 'Forms/login.php';?></p>
+				<div class="login">
+		<div class="login-grids">
+			<div class="col-md-6 log">
+         
+                                        <?=include 'Forms/login.php';?>
 				</div>
-				<div class="col-md-7 about-info-right">
+				<div class="col-md-6 login-right">
 					
-                                </div>
-				<div class="clearfix"> </div>
-				
-			</div>
-			<div class="about-grid">
+                                
+			
+                                    <p></p><h3>Are you a new user?</h3>
+					<p>If you'd like to contribute to our blog click below:</p>
+					<a href="register.php" class="hvr-bounce-to-bottom button">Create An Account</a>
+                                        </div>
+				<div class="clearfix"> </div></div>
+			
 				
 <!-- //about-page -->
 		</div>

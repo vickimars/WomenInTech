@@ -948,7 +948,7 @@ h3.ghj{
 	font-size:25px;
 	margin:0 0 1em;
 }
-.headdings,.Buttons,.progress-bars,.alerts,.bread-crumbs,.pagenatin,.appearance,.distracted{
+.headings,.Buttons,.progress-bars,.alerts,.bread-crumbs,.pagenatin,.appearance,.distracted{
 	padding:2em 0;
 }
 .bs-example h1,.bs-example h2,.bs-example h3,.bs-example h4,.bs-example h5,.bs-example h6 {
@@ -957,7 +957,7 @@ h3.ghj{
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   border-top: none !important;
 }
-.headdings {
+.headings {
   padding-top: 4em;
 }
 /*-- //pages --*/
@@ -2574,7 +2574,7 @@ p.lom{
 	  width: 52%;
 	  margin-bottom: 1em;
 	}
-	.headdings {
+	.headings {
 	  padding-top:2em;
 	}
 	.Buttons {

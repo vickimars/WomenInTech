@@ -16,17 +16,21 @@ if($row['id'] == ''){
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Blog - <?php echo $row['Title'];?></title>
+    <?php include 'View/header.php';?>
+    <title>BCD - <?php echo $row['Title'];?></title>
 </head>
 <body>
-    <h1>Blog</h1>
+    <?php include 'View/bodynav.php';?>
+    <div class="pages">
+        <div class="headings"><h1><?php echo $row['Title'];?></h1></div>
 		<?php	
                     echo '<div>';
-                    echo '<h1>'.$row['Title'].'</h1>';
-                    echo '<p>Posted on '.date('jS M Y', strtotime($row['date'])).'</p>';
-                    echo '<p>'.$row['Post'].'</p>';				
+                   echo '<img src="Uploads/Posts/'.$row['id'].".jpg\" class = \"img-responsive\">";
+                    echo '<h5><p>Posted on '.date('jS M Y', strtotime($row['date'])).'</p></h5>';
+                    echo '<h4><p>'.$row['Post'].'</p><h4>';				
                     echo '</div>';
 		?>
 	</div>
+    <?php include 'View/footer.html';?>
 </body>
 </html>
