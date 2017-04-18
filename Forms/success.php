@@ -14,7 +14,10 @@ $login_session = $_SESSION['username'];
         <b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
         <b id="logout"><a href="/WomenInTech/Forms/logout.php">Log Out</a></b>
         <p>
-            <a href='Forms/account.php'>Account Information</a>
+        <ul>
+            <li><a href='account.php'>Account Information</a></li>
+            <li><a href='uploadblogpost.php'>Upload a post</a></li>
+        </ul>
         </p>    
     </body>
     

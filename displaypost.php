@@ -24,7 +24,8 @@ if($row['id'] == ''){
                     echo '<div>';
                     echo '<h1>'.$row['Title'].'</h1>';
                     echo '<p>Posted on '.date('jS M Y', strtotime($row['date'])).'</p>';
-                    echo '<p>'.$row['Post'].'</p>';				
+                    echo '<p>Posted by '.$row['username'].'</p>';
+                    echo '<p>'.$row['Post'].'</p>';
                     echo '</div>';
 		?>
 	</div>

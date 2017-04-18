@@ -71,8 +71,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  </ul>
 						  <div class="sign-in">
 							<ul>
-								<li><a href="forms/login.php">Sign In </a>/</li>
-								<li><a href="forms/register.php">Register</a></li>
+								<li><a href="login.php">Sign In </a>/</li>
+								<li><a href="register.php">Register</a></li>
 							</ul>
 							</div>
 						</div><!-- /.navbar-collapse -->
@@ -144,27 +144,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li>
 						<div class="banner-bottom-grid">
 							<img src="images/1.jpg" alt=" " class="img-responsive" />
-							<p>BLOg POST ONE</p>
+							<p>Interview with Victoria Lloyd</p>
 							<div class="more">
-								<a href="single.html" class="hvr-bounce-to-bottom sint">Read More</a>
+								<a href="viewpost.php?id=15" class="hvr-bounce-to-bottom sint">Read More</a>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="banner-bottom-grid">
 							<img src="images/2.jpg" alt=" " class="img-responsive" />
-							<p>BLOG POST TWO </p>
+							<p>A Beginner's Guide to Coding</p>
 							<div class="more">
-								<a href="single.html" class="hvr-bounce-to-bottom sint">Read More</a>
+								<a href="viewpost.php?id=16" class="hvr-bounce-to-bottom sint">Read More</a>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="banner-bottom-grid">
 							<img src="images/3.jpg" alt=" " class="img-responsive" />
-							<p>placeholder text</p>
+							<p>F$*king code!</p>
 							<div class="more">
-								<a href="single.html" class="hvr-bounce-to-bottom sint">Read More</a>
+								<a href="viewpost.php?id=17" class="hvr-bounce-to-bottom sint">Read More</a>
 							</div>
 						</div>
 					</li>
