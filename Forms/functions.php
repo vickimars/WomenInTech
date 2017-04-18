@@ -86,7 +86,7 @@ include '../Controller/connection.php';
 
 //This function has been tested and works!
 function add_post($pdo,$post){
-include '../Controller/connection.php';
+include 'Controller/connection.php';
     /*if ($id) {
         $sql = 'UPDATE posts SET title = ?, post = ?, author = ?, username = ?, date = ? WHERE id = ?';
     } else {
@@ -98,7 +98,7 @@ $sql = 'INSERT INTO BlogPosts(Title, Post, username, phptag, mojitotag, funnytag
         $results = $pdo->prepare($sql);
         $results->bindValue(1, $post['Title'], PDO::PARAM_STR);
         $results->bindValue(2, $post['Post'], PDO::PARAM_STR);
-		$results->bindValue(3, $_SESSION['username'], PDO::PARAM_STR);
+		$results->bindValue(3, /*$_SESSION*/$post['Username'], PDO::PARAM_STR);
                 $results->bindValue(4, $post['phptag'], PDO::PARAM_STR);
                 $results->bindValue(5, $post['mojitotag'], PDO::PARAM_STR);
                 $results->bindValue(6, $post['funnytag'], PDO::PARAM_STR);
@@ -138,7 +138,7 @@ try {
 
 //This function has been tested and works!
 function add_user($pdo, $user){
-include '../Controller/connection.php'; 
+include 'Controller/connection.php'; 
  //userdate to include in db?   
     /*if ($id) {
         $sql = 'UPDATE users SET username = ?, password = ?, email = ? about_me = ?'; 
