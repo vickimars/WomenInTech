@@ -19,6 +19,7 @@ $login_session = $_SESSION['username'];
             <li><a href='uploadblogpost.php'>Upload a post</a></li>
         </ul>
         </p>    
+         <?php include 'View/footer.html';?>
     </body>
     
 </html>

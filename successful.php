@@ -104,40 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //about-page -->
 		</div>
 	</div>
-<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-3 footer-grid">
-					<h3></h3>
-					<div class="footer-grd-left">
-						
-					</div>
-					<div class="footer-grd-left">
-					
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-3 footer-grid">
-					<h3></h3>
-					<ul>
-					
-					</ul>
-				</div>
-				<div class="col-md-3 footer-grid">
-					<h3></h3>
-					<ul>
-					
-					</ul>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-	<div class="footer-bottom">
-
-	</div>
-<!-- //footer -->
+    <?php include 'View/footer.html';?>
 <!-- for bootstrap working -->
 		<script src="js/bootstrap.js"> </script>
 <!-- //for bootstrap working -->
