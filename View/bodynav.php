@@ -26,8 +26,8 @@
 						  </ul>
 						  <div class="sign-in">
 							<ul>
-						<li><a href="forms/login.php">Sign In </a>/</li>
-								<li><a href="forms/register.php"> Register</a></li>
+						<li><a href="login.php">Sign In </a>/</li>
+								<li><a href="register.php"> Register</a></li>
 							</ul>
 							</div>
 						</div><!-- /.navbar-collapse -->
