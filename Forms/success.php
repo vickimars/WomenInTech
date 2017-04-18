@@ -16,6 +16,7 @@ $login_session = $_SESSION['username'];
         <p>
             <a href='Forms/account.php'>Account Information</a>
         </p>    
+         <?php include 'View/footer.html';?>
     </body>
     
 </html>
