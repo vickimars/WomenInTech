@@ -3,13 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <?php include 'View/header.php';?>
+
 </head>
 <body>
-    
-    <div id="wrapper">
-
-	<h1>Blog</h1>
+     <?php include 'View/bodynav.php';?>
+     <div class="pages">
+        <div class="headings">
+	<h1>All Posts To Date</h1>
             <?php
                 try {
                     $stmt = $pdo->query('SELECT id, Title, Post, username, date FROM blogposts ORDER BY id DESC');
@@ -25,6 +26,7 @@
 		 echo $e->getMessage();
 	}
 ?>
-</div>
+        </div></div>
+     <?php include 'View/footer.html';?>
 </body>
 </html>
