@@ -2119,7 +2119,7 @@ p.lom{
 	.row {
 	  margin: 0;
 	}
-	.about-team-grids {
+	.col-sm-6-grids {
 	  float: left;
 	  width: 50%;
 	}

@@ -87,13 +87,15 @@ include '../Controller/connection.php';
 //This function has been tested and works!
 function add_post($pdo,$post){
 include 'Controller/connection.php';
-    /*if ($id) {
-        $sql = 'UPDATE posts SET title = ?, post = ?, author = ?, username = ?, date = ? WHERE id = ?';
+if ($_GET['id']) {
+    $postid = $_GET['id'];
+        $sql = "UPDATE posts SET Title = ?, Post = ?, username = ?, phptag = ?, mojitotag =?, funnytag = ?, journeytag = ? WHERE id = $postid";
     } else {
-    $sql = 'INSERT INTO posts(title, post, author, username, date) VALUES(?, ?, ?, ?, ?)';
-    }*/
+   //$sql = 'INSERT INTO posts(title, post, author, username, date) VALUES(?, ?, ?, ?, ?)';
+
 
 $sql = 'INSERT INTO BlogPosts(Title, Post, username, phptag, mojitotag, funnytag, journeytag) VALUES(?, ?, ?, ?, ?, ? ,?)';
+    }
     try {
         $results = $pdo->prepare($sql);
         $results->bindValue(1, $post['Title'], PDO::PARAM_STR);
