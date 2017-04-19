@@ -18,7 +18,7 @@ include '../Controller/connection.php';
 }
 
 function get_user_posts($username) {
-include '../Controller/connection.php';
+include 'Controller/connection.php';
   
     try {
     $results =$pdo->prepare('SELECT id, Title, Post, username, date FROM BlogPosts WHERE username = ?');
@@ -47,7 +47,7 @@ include '../Controller/connection.php';
 
 //updated Get functions (AE) working!!
 function get_user($username) {
-require_once '../Controller/connection.php';
+require_once 'Controller/connection.php';
     
     try {
     $results = $pdo->prepare("SELECT email, username, password FROM users WHERE username = ?");

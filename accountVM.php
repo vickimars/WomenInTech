@@ -5,7 +5,7 @@ session_start();
  *
  */
 
-require_once 'functions.php';
+require_once 'forms/functions.php';
 $user_info = get_user($_SESSION['username']);
 $user_posts = get_user_posts($_SESSION['username']);
 
@@ -17,11 +17,11 @@ $user_posts = get_user_posts($_SESSION['username']);
 
 <html>
     <head>
-        
+         <?php include 'view/header.php';?>
         <title>Account Info</title>
     </head>
     <body>
-       
+        <?php include 'view/bodynav.php';?>
  <div class="pages">
         <div class="headings">
             <div>
@@ -48,13 +48,15 @@ $user_posts = get_user_posts($_SESSION['username']);
             ?>
 
         </p>
-
+  <div> 
         <p>
             Update your account information:
             
         </p>
-            </div>
-  
+        
+  </div></div></div></div>
+         <?php include 'view/footer.html';?>
+        
     </body>    
     
     
