@@ -8,10 +8,20 @@
 </head>
 <body>
      <?php include 'View/bodynav.php';?>
-     <div class="pages">
-        <div class="headings">
-	<h1>All Posts To Date</h1>
-            <?php
+    
+    <!-- about-page -->
+	
+    <div class="pages">
+        <div class="about">
+            <div class="headings" bg-color="white">
+			<div class="about-text">
+				 <h1>All Posts To Date</h1>
+			</div>	
+				<div class="blog">
+		<div class="blog-left">
+			
+         
+                                                   <?php
                 try {
                     $stmt = $pdo->query('SELECT id, Title, Post, username, date FROM blogposts ORDER BY id DESC');
 			while($row = $stmt->fetch()){
@@ -26,7 +36,34 @@
 		 echo $e->getMessage();
 	}
 ?>
-        </div></div>
-     <?php include 'View/footer.html';?>
+			
+				<div class="clearfix"> </div></div>
+			
+		     
+				
+            
+
+       
+                                <div class="blog-right"><h3>Posts By Tags:</h3>
+                                    <p>
+                                    <h4><span class="label label-warning"><a href="postbytag.php?tag=phptag">PHP</a></span><br></h4>
+                                    <h4><span class="label label-warning"><a href="postbytag.php?tag=mojitotag">Mojito</a></span><br></h4>
+                                    <h4><span class="label label-warning"><a href="postbytag.php?tag=funnytag">Funny</a></span><br></h4>
+                                    <h4><span class="label label-warning"><a href="postbytag.php?tag=journeytag">Journey</a></span><br></h4>
+                                
+                                </p>
+                                </div>
+         
+             </div>
+     </div>
+    <div class="clearfix"> </div>		
+<!-- //about-page -->
+		</div>
+	</div>
+
+
+    
+  
+     <?php include 'View/footer.html';?> 
 </body>
 </html>
