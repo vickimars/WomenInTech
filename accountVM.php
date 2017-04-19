@@ -54,7 +54,7 @@ $user_posts = get_user_posts($_SESSION['username']);
             
         </p>
         
-      </div>
+  </div></div></div></div>
          <?php include 'view/footer.html';?>
         
     </body>    
